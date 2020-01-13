@@ -3,6 +3,11 @@ import User from './User';
 
 interface Room {
 	/**
+	 * Gets room id
+	 */
+	getId(): number;
+
+	/**
 	 * @return Room owner
 	 */
 	getOwner(): User;

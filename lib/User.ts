@@ -4,6 +4,16 @@ import UserProfile from './UserProfile';
 
 interface User {
 	/**
+	 * Gets user id
+	 */
+	getId(): number;
+
+	/**
+	 * Gets user name
+	 */
+	getName(): string | undefined;
+
+	/**
 	 * Gets the current room
 	 */
 	getRoom(): Room | null;
