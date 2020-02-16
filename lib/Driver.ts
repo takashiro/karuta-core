@@ -10,7 +10,7 @@ interface Driver {
 	getConfig(): any;
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	getAction(command: number): Action<any, any>;
+	getAction(command: number): Action<any, any> | undefined;
 }
 
 export default Driver;
