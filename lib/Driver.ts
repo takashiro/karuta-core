@@ -3,8 +3,11 @@ import Action from './Action';
 interface Driver {
 	getName(): string;
 
-	setConfig(config: object): void;
-	getConfig(): object;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	setConfig(config: any): void;
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	getConfig(): any;
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	getAction(command: number): Action<any, any>;
