@@ -69,13 +69,13 @@ interface Room {
 	/**
 	 * @return room configuration
 	 */
-	getConfig(): object;
+	getConfig(): unknown;
 
 	/**
 	 * Update room configuration
 	 * @param config
 	 */
-	updateConfig(config: object): void;
+	updateConfig(config: unknown): void;
 
 	/**
 	 * @return room driver

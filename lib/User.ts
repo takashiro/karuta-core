@@ -84,7 +84,6 @@ interface User {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	request(command: number, args: any): Promise<any>;
 
-
 	/**
 	 * Send a command to the client and return the response
 	 * @param command
