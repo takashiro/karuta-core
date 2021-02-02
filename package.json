@@ -1,6 +1,6 @@
 {
   "name": "@karuta/core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Core Module for Karuta Server and Extensions",
   "main": "dist/index.js",
   "scripts": {
