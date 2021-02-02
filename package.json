@@ -2,8 +2,10 @@
   "name": "@karuta/core",
   "version": "0.1.1",
   "description": "Core Module for Karuta Server and Extensions",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "rimraf dist && tsc",
+    "debug": "tsc --incremental --sourceMap",
     "test": "eslint --ext .ts ."
   },
   "repository": {
@@ -21,6 +23,9 @@
     "url": "https://github.com/takashiro/karuta-node-core/issues"
   },
   "homepage": "https://github.com/takashiro/karuta-node-core#readme",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
