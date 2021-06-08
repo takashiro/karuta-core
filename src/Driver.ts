@@ -1,16 +1,13 @@
-import Action from './Action';
+import ContextHandler from './ContextHandler';
 
 interface Driver {
 	getName(): string;
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	setConfig(config: any): void;
+	setConfig(config: unknown): void;
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	getConfig(): any;
+	getConfig(): unknown;
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	getAction(command: number): Action<any, any> | undefined;
+	getContextHandler(context: number): ContextHandler | undefined;
 }
 
 export default Driver;

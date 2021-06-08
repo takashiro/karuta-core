@@ -1,6 +1,10 @@
 import Room from './Room';
 import Driver from './Driver';
-import UserProfile from './UserProfile';
+
+export interface UserProfile {
+	id: number;
+	name: string | undefined;
+}
 
 interface User {
 	/**
