@@ -1,3 +1,5 @@
+import { Method } from '@karuta/protocol';
+
 import Driver from './Driver';
 import User from './User';
 
@@ -37,34 +39,34 @@ interface Room {
 
 	/**
 	 * Broadcast a command to all users in this room
-	 * @param command
+	 * @param context
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	broadcast(command: number): void;
+	broadcast(method: Method, context: number): void;
 
 	/**
 	 * Broadcast a command to all users in this room
-	 * @param command
+	 * @param method
+	 * @param context
 	 * @param args
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	broadcast(command: number, args: any): void;
+	broadcast(method: Method, context: number, args: unknown): void;
 
 	/**
 	 * Broadcast a command to all users except one
 	 * @param except
-	 * @param command
+	 * @param method
+	 * @param context
 	 */
-	broadcastExcept(except: User, command: number): void;
+	broadcastExcept(except: User, method: Method, context: number): void;
 
 	/**
 	 * Broadcast a command to all users except one
 	 * @param except
-	 * @param command
+	 * @param method
+	 * @param context
 	 * @param args
 	 */
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	broadcastExcept(except: User, command: number, args: any): void;
+	broadcastExcept(except: User, method: Method, context: number, args: unknown): void;
 
 	/**
 	 * @return room configuration
