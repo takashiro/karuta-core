@@ -1,5 +1,6 @@
 import { Method } from '@karuta/protocol';
 
+import Lobby from './Lobby';
 import Room from './Room';
 import Driver from './Driver';
 
@@ -9,6 +10,14 @@ export interface UserProfile {
 }
 
 interface User {
+	on(event: 'disconnected', listener: () => void): this;
+
+	once(event: 'disconnected', listener: () => void): this;
+
+	off(event: 'disconnected', listener: () => void): this;
+
+	emit(event: 'disconnected'): boolean;
+
 	/**
 	 * Gets user id
 	 */
@@ -31,6 +40,17 @@ interface User {
 	getRoom(): Room | undefined;
 
 	/**
+	 * Sets the current room
+	 * @param room
+	 */
+	setRoom(room?: Room): void;
+
+	/**
+	 * Gets the lobby
+	 */
+	getLobby(): Lobby;
+
+	/**
 	 * Gets the driver in the room
 	 */
 	getDriver(): Driver | undefined;
@@ -49,7 +69,6 @@ interface User {
 	 * @return brief introduction to the user
 	 */
 	getProfile(): UserProfile;
-
 
 	/**
 	 * Sets maximum time limit for each request.

@@ -4,6 +4,14 @@ import Driver from './Driver';
 import User from './User';
 
 interface Room {
+	on(event: 'close', listener: () => void): this;
+
+	once(event: 'close', listener: () => void): this;
+
+	off(event: 'close', listener: () => void): this;
+
+	emit(event: 'close'): boolean;
+
 	/**
 	 * Gets room id
 	 */
@@ -83,6 +91,12 @@ interface Room {
 	 * @return room driver
 	 */
 	getDriver(): Driver | undefined;
+
+	/**
+	 * Load a driver from Node.js modules.
+	 * @param name driver name
+	 */
+	loadDriver(name: string): boolean;
 }
 
 export default Room;
