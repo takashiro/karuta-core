@@ -1,4 +1,7 @@
-import ContextHandler from './ContextHandler';
+import ContextListener from './ContextListener';
+import User from './User';
+
+type ContextListenerCreator = new (user: User) => ContextListener;
 
 interface Driver {
 	getName(): string;
@@ -7,7 +10,7 @@ interface Driver {
 
 	getConfig(): unknown;
 
-	getContextHandler(context: number): ContextHandler | undefined;
+	getContextListeners(): ContextListenerCreator[] | undefined;
 }
 
 export default Driver;

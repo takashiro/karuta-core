@@ -1,6 +1,8 @@
-type RequestHandler = (req: unknown) => Promise<unknown>;
+type RequestHandler = (req: unknown) => unknown;
 
-interface ContextHandler {
+interface ContextListener {
+	readonly context: number;
+
 	get?: RequestHandler;
 
 	head?: RequestHandler;
@@ -14,4 +16,4 @@ interface ContextHandler {
 	delete?: RequestHandler;
 }
 
-export default ContextHandler;
+export default ContextListener;

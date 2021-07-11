@@ -16,7 +16,7 @@ interface Room {
 	 * Find a user by user id
 	 * @param id user id
 	 */
-	findUser(id: number): User | null;
+	findUser(id: number): User | undefined;
 
 	/**
 	 * @return user list
@@ -80,13 +80,7 @@ interface Room {
 	/**
 	 * @return room driver
 	 */
-	getDriver(): Driver | null;
-
-	/**
-	 * Load a driver.
-	 * @param name driver name
-	 */
-	loadDriver(name: string): boolean;
+	getDriver(): Driver | undefined;
 }
 
 export default Room;
