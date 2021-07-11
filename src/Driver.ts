@@ -1,7 +1,6 @@
-import ContextListener from './ContextListener';
-import User from './User';
+import { ContextListener } from '@karuta/protocol';
 
-type ContextListenerCreator = new (user: User) => ContextListener;
+import User from './User';
 
 interface Driver {
 	getName(): string;
@@ -10,7 +9,7 @@ interface Driver {
 
 	getConfig(): unknown;
 
-	getContextListeners(): ContextListenerCreator[] | undefined;
+	createContextListeners(user: User): ContextListener[] | undefined;
 }
 
 export default Driver;
