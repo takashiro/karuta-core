@@ -27,7 +27,7 @@
     "dist"
   ],
   "dependencies": {
-    "@karuta/protocol": "^0.2.0"
+    "@karuta/protocol": "^0.2.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.2",

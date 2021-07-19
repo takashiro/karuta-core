@@ -5,3 +5,4 @@ export {
 	default as User,
 	UserProfile,
 } from './User';
+export * from '@karuta/protocol';
