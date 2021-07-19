@@ -97,6 +97,12 @@ interface Room {
 	 * @param name driver name
 	 */
 	loadDriver(name: string): boolean;
+
+	/**
+	 * Unload the existing driver.
+	 * @return Whether the existing driver is unloaded.
+	 */
+	unloadDriver(): boolean;
 }
 
 export default Room;
