@@ -1,7 +1,13 @@
 import { Method } from '@karuta/protocol';
 
-import Driver from './Driver';
-import User from './User';
+import Driver, { DriverProfile } from './Driver';
+import User, { UserProfile } from './User';
+
+export interface RoomProfile {
+	id: number;
+	owner: UserProfile;
+	driver?: DriverProfile;
+}
 
 interface Room {
 	on(event: 'close', listener: () => void): this;
