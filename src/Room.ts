@@ -83,12 +83,17 @@ interface Room {
 	broadcastExcept(except: User, method: Method, context: number, args: unknown): void;
 
 	/**
-	 * @return room configuration
+	 * @return Basic information of the room
 	 */
-	getConfig(): unknown;
+	getProfile(): RoomProfile;
 
 	/**
-	 * Update room configuration
+	 * @return driver configuration
+	 */
+	getConfig(): DriverProfile | undefined;
+
+	/**
+	 * Update driver configuration
 	 * @param config
 	 */
 	updateConfig(config: unknown): void;
