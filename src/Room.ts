@@ -106,7 +106,7 @@ interface Room {
 	/**
 	 * @return room driver
 	 */
-	getDriver(): Driver | undefined;
+	getDriver(): Driver<unknown> | undefined;
 
 	/**
 	 * Load a driver from Node.js modules.

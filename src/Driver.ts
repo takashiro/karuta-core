@@ -2,19 +2,19 @@ import { ContextListener } from '@karuta/protocol';
 
 import User from './User';
 
-export interface DriverProfile {
+export interface DriverProfile<Config> {
 	name: string;
-	[key: string]: unknown;
+	config: Config;
 }
 
-interface Driver {
+interface Driver<Config> {
 	getName(): string;
 
-	getProfile(): DriverProfile;
+	getProfile(): DriverProfile<Config>;
 
-	setConfig(config: unknown): void;
+	setConfig(config: Config): void;
 
-	getConfig(): unknown;
+	getConfig(): Config;
 
 	createContextListeners(user: User): ContextListener[] | undefined;
 }

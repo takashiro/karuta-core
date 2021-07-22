@@ -53,7 +53,7 @@ interface User {
 	/**
 	 * Gets the driver in the room
 	 */
-	getDriver(): Driver | undefined;
+	getDriver(): Driver<unknown> | undefined;
 
 	/**
 	 * @return whether the user is connected
