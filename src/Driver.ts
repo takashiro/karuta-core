@@ -10,6 +10,8 @@ export interface DriverProfile {
 interface Driver {
 	getName(): string;
 
+	getProfile(): DriverProfile;
+
 	setConfig(config: unknown): void;
 
 	getConfig(): unknown;
