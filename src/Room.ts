@@ -1,12 +1,17 @@
 import { Method } from '@karuta/protocol';
 
-import Driver, { DriverProfile } from './Driver';
+import Driver from './Driver';
 import User, { UserProfile } from './User';
+
+export interface RoomConfiguration {
+	name?: string;
+}
 
 export interface RoomProfile {
 	id: number;
 	owner: UserProfile;
-	driver?: DriverProfile;
+	driver?: string;
+	config: RoomConfiguration;
 }
 
 interface Room {
@@ -88,15 +93,15 @@ interface Room {
 	getProfile(): RoomProfile;
 
 	/**
-	 * @return driver configuration
+	 * @return room configuration
 	 */
-	getConfig(): DriverProfile | undefined;
+	getConfig(): RoomConfiguration;
 
 	/**
-	 * Update driver configuration
+	 * Update room configuration
 	 * @param config
 	 */
-	updateConfig(config: unknown): void;
+	updateConfig(config: Partial<RoomConfiguration>): void;
 
 	/**
 	 * @return room driver

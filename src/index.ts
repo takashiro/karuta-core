@@ -5,6 +5,7 @@ export {
 export { default as Lobby } from './Lobby';
 export {
 	default as Room,
+	RoomConfiguration,
 	RoomProfile,
 } from './Room';
 export {
