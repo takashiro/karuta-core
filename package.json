@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/takashiro/karuta-node-core.git"
+    "url": "git+https://github.com/takashiro/karuta-core.git"
   },
   "keywords": [
     "karuta",
@@ -20,9 +20,9 @@
   "author": "Kazuichi Takashiro",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/takashiro/karuta-node-core/issues"
+    "url": "https://github.com/takashiro/karuta-core/issues"
   },
-  "homepage": "https://github.com/takashiro/karuta-node-core#readme",
+  "homepage": "https://github.com/takashiro/karuta-core#readme",
   "files": [
     "dist"
   ],
