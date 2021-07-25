@@ -1,3 +1,6 @@
+export * from '@karuta/protocol';
+
+export { default as Context } from './Context';
 export {
 	default as Driver,
 	DriverProfile,
@@ -12,4 +15,3 @@ export {
 	default as User,
 	UserProfile,
 } from './User';
-export * from '@karuta/protocol';
