@@ -12,7 +12,7 @@ interface Driver<Config> {
 
 	getProfile(): DriverProfile<Config>;
 
-	updateConfig(config: Config): void;
+	updateConfig(config: Partial<Config>): void;
 
 	getConfig(): Config;
 
